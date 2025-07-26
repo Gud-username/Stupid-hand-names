@@ -11,7 +11,7 @@
 local function init()
     G.localization.misc.poker_hands['High card'] = "High Cock"
 
-    sendDebugMessage("BalaGay :: Successfully Gay-ified the Straights!")
+    sendDebugMessage("HighCock :: Successfully Cocked the High card")
 end
 
 if SMODS.current_mod then
