@@ -1,20 +1,21 @@
-local logging = require("logging")
-local logger = logging.getLogger("cock")
+--- STEAMODDED HEADER
+--- MOD_NAME: HighCock
+--- MOD_ID: highcock
+--- MOD_AUTHOR: [Gud]
+--- MOD_DESCRIPTION: High card is now high cock, why did you make this joke maxie?
 
-local function on_game_load()
-    local patch = [[
-                G.localization.misc.poker_hands['High card'] = "High cock"
+----------------------------------------------
+------------MOD CODE -------------------------
+----------------------------------------------
 
-                init_localization()
-                ]]
+local function init()
+    G.localization.misc.poker_hands['High card'] = "High Cock"
 
-    local toPatch = "init_localization()"
-
-    logger:info("Highing my cock")
-
-    balalib.inject("game", "Game:set_language", toPatch, patch)
+    sendDebugMessage("BalaGay :: Successfully Gay-ified the Straights!")
 end
 
-return {
-    on_game_load = on_game_load
-}
+if SMODS.current_mod then
+    SMODS.current_mod.process_loc_text = init
+else
+    init()
+end
