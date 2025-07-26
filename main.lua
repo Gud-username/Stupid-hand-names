@@ -9,7 +9,7 @@
 ----------------------------------------------
 
 local function init()
-    G.localization.misc.poker_hands['High card'] = "High Cock"
+    G.localization.misc.poker_hands['High Card'] = "High Cock"
 
     sendDebugMessage("HighCock :: Successfully Cocked the High card")
 end
